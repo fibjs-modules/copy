@@ -12,7 +12,7 @@
 [npm-url]: https://npmjs.org/package/@fibjs/copy
 [travis-image]: https://img.shields.io/travis/fibjs-modules/copy.svg?style=flat-square
 [travis-url]: https://travis-ci.org/fibjs-modules/copy
-[appveyor-image]: https://ci.appveyor.com/api/projects/status/e9u3e4hrit4h8sna/branch/master?svg=true
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/hnsvto46bnirhx1v/branch/master?svg=true
 [appveyor-url]: https://ci.appveyor.com/project/ngot/copy
 [codecov-image]: https://img.shields.io/codecov/c/github/fibjs-modules/copy.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/fibjs-modules/copy?branch=master
