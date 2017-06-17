@@ -18,7 +18,7 @@
     "@fibjs/fs-readdir-recursive": "^1.0.2"
   },
   "devDependencies": {
-    "@fibjs/ci": "^1.0.0",
+    "@fibjs/ci": "^2.0.0",
     "@fibjs/mkdirp": "^1.0.0",
     "@fibjs/rmdirr": "^2.0.0"
   },
