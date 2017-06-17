@@ -1,0 +1,37 @@
+{
+  "name": "@fibjs/copy",
+  "description": "copy file or directory recursively asynchronously.",
+  "version": "1.0.0",
+  "keywords": [
+    "copy",
+    "fs",
+    "fibjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibjs-modules/copy.git"
+  },
+  "scripts": {
+    "ci": "fibjs test/test.js"
+  },
+  "dependencies": {
+    "@fibjs/fs-readdir-recursive": "^1.0.2"
+  },
+  "devDependencies": {
+    "@fibjs/ci": "^1.0.0",
+    "@fibjs/mkdirp": "^1.0.0",
+    "@fibjs/rmdirr": "^1.0.1"
+  },
+  "ci": {
+    "version": "0.3.1, 0.4.1"
+  },
+  "bugs": {
+    "url": "https://github.com/fibjs-modules/copy/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "author": "ngot <zhuanghengfei@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/fibjs-modules/copy#readme"
+}
