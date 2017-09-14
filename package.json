@@ -23,7 +23,7 @@
     "@fibjs/rmdirr": "^2.0.0"
   },
   "ci": {
-    "version": "0.3.1, 0.4.1"
+    "version": "0.3.1, 0.13.0"
   },
   "bugs": {
     "url": "https://github.com/fibjs-modules/copy/issues"

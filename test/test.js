@@ -25,20 +25,32 @@ describe("copy", () => {
     });
   });
 
-  it('processor', () => {
-    copy(src, tmp, data => {
-      data = data.toString();
-      data = +data;
-      data++;
-      return new Buffer(data + '');
-    });
-
+  it('processor data', () => {
+    copy(src, tmp, data => String(+data.toString() + 1));
     const dirs = readdir(tmp);
     dirs.forEach(dir => {
       const a = parseInt(path.basename(dir).split('.')[0]) + 1;
       const b = fs.readFile(path.join(tmp, dir)).toString();
       assert.equal(a, b);
     });
+  });
+
+  it('processor filter', () => {
+    copy(src, tmp, (data, dir) => {
+      if (dir.src.endsWith('files/1.txt')) {
+        return false;
+      }
+      return data;
+    });
+
+    const dirs = readdir(tmp);
+    assert.deepEqual([
+      "2.txt",
+      "3.txt",
+      "4.txt",
+      "dir1/1.txt",
+      "dir1/2.txt"
+    ], dirs);
   });
 
   it('throws', () => {

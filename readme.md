@@ -40,6 +40,20 @@ copy('path to source', 'path to target');
 
 copy('path to source', 'path to target', data => {
   // process the file buffer before write to the target
+  return data.toString() + 'foo';
+});
+
+copy('path to source', 'path to target', (data, dir) => {
+  if (dir.src.endsWith('xxx')) {
+    // ignore this path
+    return false;
+  }
+  return data;
+});
+
+copy('path to source', 'path to target', () => {
+  // doing nothing
+  return true;
 });
 ```
 

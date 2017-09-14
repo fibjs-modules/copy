@@ -21,7 +21,12 @@ module.exports = (src, target, processor) => {
     assert(util.isFunction(processor), 'the processor must be Function');
     co.parallel(dirs, dir => {
       let data = fs.readFile(dir.src);
-      data = processor(data);
+      let res = processor(data, dir);
+      if (res === false) {
+        return;
+      } else if (res !== true) {
+        data = res;
+      }
       const dirname = path.dirname(dir.target);
       if (!fs.exists(dirname)) {
         mkdirp(dirname);
