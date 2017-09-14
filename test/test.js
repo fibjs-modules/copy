@@ -37,7 +37,7 @@ describe("copy", () => {
 
   it('processor filter', () => {
     copy(src, tmp, (data, dir) => {
-      if (dir.src.endsWith('files/1.txt')) {
+      if (dir.src.endsWith(path.normalize('files/1.txt'))) {
         return false;
       }
       return data;
