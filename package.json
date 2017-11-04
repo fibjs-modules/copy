@@ -12,14 +12,14 @@
     "url": "git+https://github.com/fibjs-modules/copy.git"
   },
   "scripts": {
-    "ci": "fibjs test/test.js"
+    "ci": "fibjs --cov=lcov.info  test/test.js"
   },
   "dependencies": {
-    "@fibjs/fs-readdir-recursive": "^1.0.2"
+    "@fibjs/fs-readdir-recursive": "^1.0.2",
+    "@fibjs/mkdirp": "^1.0.0"
   },
   "devDependencies": {
     "@fibjs/ci": "^2.0.0",
-    "@fibjs/mkdirp": "^1.0.0",
     "@fibjs/rmdirr": "^2.0.0"
   },
   "ci": {
